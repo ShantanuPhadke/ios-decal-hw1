@@ -14,11 +14,11 @@ class Foo {
     var wordA : String!
     var wordB : String!
     
-    init (words: [String?]) {
+    init (words: [String!]) {
         wordA = words[0]
         wordB = words[1]
     }
-//: [EXPLAIN YOUR ANSWER TO Q1 HERE]
+//: In the loop we had initially used the ? symbol, which tells the compiler that the particular variable can have an actual value OR be nil. Instead, the correct way to unwrap optionals and guarantee that you would never encounter nil is by using the ! operator, which tells the compiler to ignore the fact that it is an optional (it is treated like a normal data type)
 
 //: ## Q2: Variable Types and Function Types
 //: Why does the compiler dislike the for loop? Also, what should we return?
